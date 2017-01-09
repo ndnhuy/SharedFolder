@@ -3,39 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/datatable.css">
     <title>HTML - CSS - JavaScript</title>
 </head>
 <body>
 <header> 
 </header>
-<section class="content">
+<section class="container">
     <h1 style="text-align: center">DataTable Plugin</h1>
     <div class="datatable-filter"></div>
-    <table class="datatable" style="margin: auto" border="1">
-        <thead>
-        </thead>
-        <tbody>
-        </tbody>
-    </table> 
-    <ul class="datatable-pagination">
-<!--       <li><a href="#">«</a></li>
-      <li><a href="#">1</a></li>
-      <li><a class="active" href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#">6</a></li>
-      <li><a href="#">7</a></li>
-      <li><a href="#">»</a></li> -->
-    </ul>
+    <div class="datatable">
+      <table class="table table-bordered" style="margin: auto" border="1">
+          <thead>
+          </thead>
+          <tbody>
+          </tbody>
+      </table> 
+      <ul></ul>
+<!--       <ul class="pagination">
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li><a href="#">»</a></li>
+      </ul> -->
+    </div>
+
 </section>
-<footer>
-  HTML, CSS and Javascript
-</footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/datatable-plugin.js"></script>
+
     <script>
-      $( ".datatable" ).datatable();
+      $( ".datatable" ).datatable({
+        data: [
+          ["1", "2", "3"],
+          ["4", "5", "6"]
+        ],
+        columnDefs: [
+          {name: "ONE"},
+          {name: "TWO"},
+          {name: "THREE"}
+        ],
+        totalPages: 30
+      });
     </script>
 </body>
 </html>

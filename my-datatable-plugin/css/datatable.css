@@ -1,0 +1,13 @@
+.paginate_button > a {
+	cursor: pointer;
+}
+
+.paginate_button.disabled {
+	cursor: default;
+}
+
+.paginate_button.current a {
+	background-color: grey;
+	color: white;
+	pointer-events: none;
+}
